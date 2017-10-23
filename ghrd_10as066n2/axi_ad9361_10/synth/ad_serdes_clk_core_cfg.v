@@ -1,0 +1,5 @@
+config ad_serdes_clk_core_cfg;
+		design ad_serdes_clk_core;
+		instance ad_serdes_clk_core.ad_serdes_clk_core use ghrd_10as066n2_alt_serdes_10.ghrd_10as066n2_alt_serdes_10_ruc4yeq;
+endconfig
+

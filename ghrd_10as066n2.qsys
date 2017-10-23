@@ -6,22 +6,27 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element ILC
    {
       datum _sortIndex
       {
-         value = "14";
+         value = "16";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
    }
-   element arria10_hps_0
+   element arria10_hps
    {
       datum _sortIndex
       {
-         value = "2";
+         value = "3";
          type = "int";
       }
    }
@@ -29,8 +34,13 @@
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "14";
          type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
       }
    }
    element clk_0
@@ -45,75 +55,24 @@
    {
       datum _sortIndex
       {
-         value = "13";
-         type = "int";
-      }
-   }
-   element emif_a10_hps_0
-   {
-      datum _sortIndex
-      {
-         value = "3";
-         type = "int";
-      }
-   }
-   element f2sdram_m
-   {
-      datum _sortIndex
-      {
-         value = "5";
-         type = "int";
-      }
-   }
-   element f2sdram_m1
-   {
-      datum _sortIndex
-      {
-         value = "6";
-         type = "int";
-      }
-   }
-   element fpga_m
-   {
-      datum _sortIndex
-      {
-         value = "7";
-         type = "int";
-      }
-   }
-   element hps_m
-   {
-      datum _sortIndex
-      {
-         value = "4";
-         type = "int";
-      }
-   }
-   element issp_0
-   {
-      datum _sortIndex
-      {
          value = "15";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
    }
-   element led_pio
+   element emif_a10_hps
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "2";
          type = "int";
       }
    }
-   element onchip_memory2_0
-   {
-      datum _sortIndex
-      {
-         value = "8";
-         type = "int";
-      }
-   }
-   element pb_lwh2f
+   element fmcomms2
    {
       datum _sortIndex
       {
@@ -121,7 +80,112 @@
          type = "int";
       }
    }
-   element reset_bridge_0
+   element fmcomms2.axi_ad9361_adc_dma_s_axi
+   {
+      datum baseAddress
+      {
+         value = "65536";
+         type = "String";
+      }
+   }
+   element fmcomms2.axi_ad9361_dac_dma_s_axi
+   {
+      datum baseAddress
+      {
+         value = "81920";
+         type = "String";
+      }
+   }
+   element fmcomms2.axi_ad9361_s_axi
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "String";
+      }
+   }
+   element fmcomms2.gpio_s1
+   {
+      datum baseAddress
+      {
+         value = "656";
+         type = "String";
+      }
+   }
+   element fmcomms2.spi_ad9361_spi_control_port
+   {
+      datum baseAddress
+      {
+         value = "704";
+         type = "String";
+      }
+   }
+   element fpga_m
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element hps_m
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element issp_0
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element led_pio
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pb_lwh2f
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element reset_bridge
    {
       datum _sortIndex
       {
@@ -129,11 +193,51 @@
          type = "int";
       }
    }
-   element sysid_qsys_0
+   element sys_cpu_interconnect
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "6";
+         type = "int";
+      }
+   }
+   element sys_cpu_interconnect.s0
+   {
+      datum baseAddress
+      {
+         value = "1048576";
+         type = "String";
+      }
+   }
+   element sys_id
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element sys_inti_mem
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element sys_mem_interconnect_axi0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element sys_mem_interconnect_axi1
+   {
+      datum _sortIndex
+      {
+         value = "8";
          type = "int";
       }
    }
@@ -151,59 +255,89 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="4" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="ghrd_10as066n2.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
+ <interface
+   name="arria10_hps_i2c0"
+   internal="arria10_hps.i2c0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="arria10_hps_i2c0_clk"
+   internal="arria10_hps.i2c0_clk"
+   type="clock"
+   dir="start" />
+ <interface
+   name="arria10_hps_i2c0_scl_in"
+   internal="arria10_hps.i2c0_scl_in"
+   type="clock"
+   dir="end" />
+ <interface
+   name="arria10_hps_io"
+   internal="arria10_hps.hps_io"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="arria10_hps_spim1"
+   internal="arria10_hps.spim1"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="arria10_hps_spim1_sclk_out"
+   internal="arria10_hps.spim1_sclk_out"
+   type="clock"
+   dir="start" />
  <interface name="clk_100" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
    name="emif_a10_hps_0_mem_conduit_end"
-   internal="emif_a10_hps_0.mem_conduit_end"
+   internal="emif_a10_hps.mem_conduit_end"
    type="conduit"
    dir="end" />
  <interface
    name="emif_a10_hps_0_oct_conduit_end"
-   internal="emif_a10_hps_0.oct_conduit_end"
+   internal="emif_a10_hps.oct_conduit_end"
    type="conduit"
    dir="end" />
  <interface
    name="emif_a10_hps_0_pll_ref_clk_clock_sink"
-   internal="emif_a10_hps_0.pll_ref_clk_clock_sink"
+   internal="emif_a10_hps.pll_ref_clk_clock_sink"
    type="clock"
    dir="end" />
  <interface
    name="f2h_cold_reset_req"
-   internal="arria10_hps_0.f2h_cold_reset_req"
+   internal="arria10_hps.f2h_cold_reset_req"
    type="reset"
    dir="end" />
  <interface
    name="f2h_debug_reset_req"
-   internal="arria10_hps_0.f2h_debug_reset_req"
+   internal="arria10_hps.f2h_debug_reset_req"
    type="reset"
    dir="end" />
  <interface
    name="f2h_stm_hw_events"
-   internal="arria10_hps_0.f2h_stm_hw_events"
+   internal="arria10_hps.f2h_stm_hw_events"
    type="conduit"
    dir="end" />
  <interface
    name="f2h_warm_reset_req"
-   internal="arria10_hps_0.f2h_warm_reset_req"
+   internal="arria10_hps.f2h_warm_reset_req"
    type="reset"
+   dir="end" />
+ <interface
+   name="fmcomms2_axi_ad9361_device_if"
+   internal="fmcomms2.axi_ad9361_device_if"
+   type="conduit"
    dir="end" />
  <interface
    name="hps_fpga_reset"
-   internal="reset_bridge_0.out_reset"
+   internal="reset_bridge.out_reset"
    type="reset"
    dir="start" />
- <interface
-   name="hps_io"
-   internal="arria10_hps_0.hps_io"
-   type="conduit"
-   dir="end" />
  <interface
    name="issp_hps_resets"
    internal="issp_0.sources"
@@ -225,6 +359,22 @@
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="sys_gpio_external"
+   internal="fmcomms2.gpio_external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="sys_spi"
+   internal="fmcomms2.spi_ad9361_external"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="up_enable"
+   internal="fmcomms2.up_enable"
+   type="conduit"
+   dir="end" />
+ <interface name="up_txnrx" internal="fmcomms2.up_txnrx" type="conduit" dir="end" />
  <module
    name="ILC"
    kind="interrupt_latency_counter"
@@ -235,7 +385,7 @@
   <parameter name="IRQ_PORT_CNT" value="2" />
  </module>
  <module
-   name="arria10_hps_0"
+   name="arria10_hps"
    kind="altera_arria10_hps"
    version="16.1"
    enabled="1">
@@ -265,14 +415,14 @@
   <parameter name="DISABLE_PERI_PLL" value="false" />
   <parameter name="DMA_Enable">No,No,No,No,No,No,No,No</parameter>
   <parameter name="EMAC0_CLK" value="250" />
-  <parameter name="EMAC0_Mode" value="RGMII_with_MDIO" />
+  <parameter name="EMAC0_Mode" value="N/A" />
   <parameter name="EMAC0_PTP" value="false" />
-  <parameter name="EMAC0_PinMuxing" value="IO" />
+  <parameter name="EMAC0_PinMuxing" value="Unused" />
   <parameter name="EMAC0_SWITCH_Enable" value="false" />
   <parameter name="EMAC1_CLK" value="250" />
-  <parameter name="EMAC1_Mode" value="N/A" />
+  <parameter name="EMAC1_Mode" value="RGMII_with_MDIO" />
   <parameter name="EMAC1_PTP" value="false" />
-  <parameter name="EMAC1_PinMuxing" value="Unused" />
+  <parameter name="EMAC1_PinMuxing" value="IO" />
   <parameter name="EMAC1_SWITCH_Enable" value="false" />
   <parameter name="EMAC2_CLK" value="250" />
   <parameter name="EMAC2_Mode" value="N/A" />
@@ -302,7 +452,7 @@
   <parameter name="F2SDRAM_PORT_CONFIG" value="6" />
   <parameter name="F2SDRAM_READY_LATENCY" value="true" />
   <parameter name="F2SINTERRUPT_Enable" value="true" />
-  <parameter name="F2S_Width" value="6" />
+  <parameter name="F2S_Width" value="2" />
   <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_EMAC0_RX_CLK_IN" value="100" />
   <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_EMAC0_TX_CLK_IN" value="100" />
   <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_EMAC1_RX_CLK_IN" value="100" />
@@ -312,7 +462,7 @@
   <parameter
      name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_EMAC_PTP_REF_CLOCK"
      value="100" />
-  <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_I2C0_SCL_IN" value="100" />
+  <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_I2C0_SCL_IN" value="0" />
   <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_I2C1_SCL_IN" value="100" />
   <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_I2CEMAC0_SCL_IN" value="100" />
   <parameter name="FPGA_PERIPHERAL_INPUT_CLOCK_FREQ_I2CEMAC1_SCL_IN" value="100" />
@@ -346,15 +496,15 @@
   <parameter name="H2F_LW_AXI_CLOCK_FREQ" value="100000000" />
   <parameter name="H2F_PENDING_RST_Enable" value="false" />
   <parameter name="H2F_TPIU_CLOCK_IN_FREQ" value="100" />
-  <parameter name="H2F_USER0_CLK_Enable" value="false" />
+  <parameter name="H2F_USER0_CLK_Enable" value="true" />
   <parameter name="H2F_USER0_CLK_FREQ" value="400" />
   <parameter name="H2F_USER1_CLK_Enable" value="false" />
   <parameter name="H2F_USER1_CLK_FREQ" value="400" />
   <parameter name="HMC_PLL_REF_CLK" value="800" />
   <parameter name="HPS_DIV_GPIO_FREQ" value="125" />
-  <parameter name="HPS_IO_Enable">SDMMC:D0,SDMMC:CMD,SDMMC:CCLK,SDMMC:D1,SDMMC:D2,SDMMC:D3,NONE,NONE,SDMMC:D4,SDMMC:D5,SDMMC:D6,SDMMC:D7,UART1:TX,UART1:RX,USB0:CLK,USB0:STP,USB0:DIR,USB0:DATA0,USB0:DATA1,USB0:NXT,USB0:DATA2,USB0:DATA3,USB0:DATA4,USB0:DATA5,USB0:DATA6,USB0:DATA7,EMAC0:TX_CLK,EMAC0:TX_CTL,EMAC0:RX_CLK,EMAC0:RX_CTL,EMAC0:TXD0,EMAC0:TXD1,EMAC0:RXD0,EMAC0:RXD1,EMAC0:TXD2,EMAC0:TXD3,EMAC0:RXD2,EMAC0:RXD3,SPIM1:CLK,SPIM1:MOSI,SPIM1:MISO,SPIM1:SS0_N,SPIM1:SS1_N,GPIO,NONE,NONE,NONE,NONE,MDIO0:MDIO,MDIO0:MDC,I2C1:SDA,I2C1:SCL,GPIO,TRACE:CLK,GPIO,GPIO,NONE,NONE,TRACE:D0,TRACE:D1,TRACE:D2,TRACE:D3</parameter>
-  <parameter name="I2C0_Mode" value="N/A" />
-  <parameter name="I2C0_PinMuxing" value="Unused" />
+  <parameter name="HPS_IO_Enable">SDMMC:D0,SDMMC:CMD,SDMMC:CCLK,SDMMC:D1,SDMMC:D2,SDMMC:D3,GPIO,GPIO,SDMMC:D4,SDMMC:D5,SDMMC:D6,SDMMC:D7,GPIO,GPIO,UART0:CTS_N,UART0:RTS_N,UART0:TX,UART0:RX,SPIM0:CLK,SPIM0:MOSI,SPIM0:MISO,SPIM0:SS0_N,MDIO1:MDIO,MDIO1:MDC,unused,unused,USB1:CLK,USB1:STP,USB1:DIR,USB1:DATA0,USB1:DATA1,USB1:NXT,USB1:DATA2,USB1:DATA3,USB1:DATA4,USB1:DATA5,USB1:DATA6,USB1:DATA7,EMAC1:TX_CLK,EMAC1:TX_CTL,EMAC1:RX_CLK,EMAC1:RX_CTL,EMAC1:TXD0,EMAC1:TXD1,EMAC1:RXD0,EMAC1:RXD1,EMAC1:TXD2,EMAC1:TXD3,EMAC1:RXD2,EMAC1:RXD3,I2C1:SDA,I2C1:SCL,unused,TRACE:CLK,unused,unused,unused,unused,TRACE:D0,TRACE:D1,TRACE:D2,TRACE:D3</parameter>
+  <parameter name="I2C0_Mode" value="default" />
+  <parameter name="I2C0_PinMuxing" value="FPGA" />
   <parameter name="I2C1_Mode" value="default" />
   <parameter name="I2C1_PinMuxing" value="IO" />
   <parameter name="I2CEMAC0_Mode" value="N/A" />
@@ -417,15 +567,15 @@
   <parameter name="S2FINTERRUPT_USB0_Enable" value="false" />
   <parameter name="S2FINTERRUPT_USB1_Enable" value="false" />
   <parameter name="S2FINTERRUPT_WATCHDOG_Enable" value="false" />
-  <parameter name="S2F_Width" value="4" />
+  <parameter name="S2F_Width" value="2" />
   <parameter name="SDMMC_Mode" value="8-bit" />
   <parameter name="SDMMC_PinMuxing" value="IO" />
   <parameter name="SDMMC_REF_CLK" value="200" />
   <parameter name="SECURITY_MODULE_Enable" value="false" />
-  <parameter name="SPIM0_Mode" value="N/A" />
-  <parameter name="SPIM0_PinMuxing" value="Unused" />
-  <parameter name="SPIM1_Mode" value="Dual_slave_selects" />
-  <parameter name="SPIM1_PinMuxing" value="IO" />
+  <parameter name="SPIM0_Mode">Single_slave_selects</parameter>
+  <parameter name="SPIM0_PinMuxing" value="IO" />
+  <parameter name="SPIM1_Mode">Single_slave_selects</parameter>
+  <parameter name="SPIM1_PinMuxing" value="FPGA" />
   <parameter name="SPIS0_Mode" value="N/A" />
   <parameter name="SPIS0_PinMuxing" value="Unused" />
   <parameter name="SPIS1_Mode" value="N/A" />
@@ -437,14 +587,14 @@
   <parameter name="TEST_Enable" value="false" />
   <parameter name="TRACE_Mode" value="default" />
   <parameter name="TRACE_PinMuxing" value="IO" />
-  <parameter name="UART0_Mode" value="N/A" />
-  <parameter name="UART0_PinMuxing" value="Unused" />
-  <parameter name="UART1_Mode" value="No_flow_control" />
-  <parameter name="UART1_PinMuxing" value="IO" />
-  <parameter name="USB0_Mode" value="default" />
-  <parameter name="USB0_PinMuxing" value="IO" />
-  <parameter name="USB1_Mode" value="N/A" />
-  <parameter name="USB1_PinMuxing" value="Unused" />
+  <parameter name="UART0_Mode" value="Flow_control" />
+  <parameter name="UART0_PinMuxing" value="IO" />
+  <parameter name="UART1_Mode" value="N/A" />
+  <parameter name="UART1_PinMuxing" value="Unused" />
+  <parameter name="USB0_Mode" value="N/A" />
+  <parameter name="USB0_PinMuxing" value="Unused" />
+  <parameter name="USB1_Mode" value="default" />
+  <parameter name="USB1_PinMuxing" value="IO" />
   <parameter name="USE_DEFAULT_MPU_CLK" value="false" />
   <parameter name="device_name" value="10AS066N3F40E2SG" />
   <parameter name="eosc1_clk_mhz" value="25.0" />
@@ -491,7 +641,7 @@
   <parameter name="width" value="4" />
  </module>
  <module
-   name="emif_a10_hps_0"
+   name="emif_a10_hps"
    kind="altera_emif_a10_hps"
    version="16.1"
    enabled="1">
@@ -1515,36 +1665,32 @@
   <parameter name="SYS_INFO_DEVICE" value="10AS066N3F40E2SG" />
   <parameter name="SYS_INFO_DEVICE_FAMILY" value="Arria 10" />
   <parameter name="SYS_INFO_DEVICE_SPEEDGRADE" value="2" />
-  <parameter name="SYS_INFO_UNIQUE_ID">ghrd_10as066n2_emif_a10_hps_0</parameter>
+  <parameter name="SYS_INFO_UNIQUE_ID">$${FILENAME}_emif_a10_hps</parameter>
   <parameter name="TRAIT_SUPPORTS_VID" value="0" />
  </module>
- <module
-   name="f2sdram_m"
-   kind="altera_jtag_avalon_master"
-   version="16.1"
-   enabled="1">
+ <module name="fmcomms2" kind="fmcomms2_v161" version="1.0" enabled="1">
+  <parameter name="AUTO_AXI_AD9361_ADC_DMA_M_DEST_AXI_ADDRESS_MAP"><![CDATA[<address-map><slave name='arria10_hps_bridges.f2sdram0_data' start='0x0' end='0x100000000' /></address-map>]]></parameter>
+  <parameter
+     name="AUTO_AXI_AD9361_ADC_DMA_M_DEST_AXI_ADDRESS_WIDTH"
+     value="AddressWidth = 32" />
+  <parameter name="AUTO_AXI_AD9361_DAC_DMA_M_SRC_AXI_ADDRESS_MAP"><![CDATA[<address-map><slave name='arria10_hps_bridges.f2sdram2_data' start='0x0' end='0x100000000' /></address-map>]]></parameter>
+  <parameter
+     name="AUTO_AXI_AD9361_DAC_DMA_M_SRC_AXI_ADDRESS_WIDTH"
+     value="AddressWidth = 32" />
+  <parameter name="AUTO_DELAY_CLK_CLOCK_DOMAIN" value="4" />
+  <parameter name="AUTO_DELAY_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_DELAY_CLK_RESET_DOMAIN" value="4" />
   <parameter name="AUTO_DEVICE" value="10AS066N3F40E2SG" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Arria 10" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
-  <parameter name="COMPONENT_CLOCK" value="0" />
-  <parameter name="FAST_VER" value="0" />
-  <parameter name="FIFO_DEPTHS" value="2" />
-  <parameter name="PLI_PORT" value="50000" />
-  <parameter name="USE_PLI" value="0" />
- </module>
- <module
-   name="f2sdram_m1"
-   kind="altera_jtag_avalon_master"
-   version="16.1"
-   enabled="1">
-  <parameter name="AUTO_DEVICE" value="10AS066N3F40E2SG" />
-  <parameter name="AUTO_DEVICE_FAMILY" value="Arria 10" />
-  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
-  <parameter name="COMPONENT_CLOCK" value="0" />
-  <parameter name="FAST_VER" value="0" />
-  <parameter name="FIFO_DEPTHS" value="2" />
-  <parameter name="PLI_PORT" value="50000" />
-  <parameter name="USE_PLI" value="0" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_MEM_CLK_CLOCK_DOMAIN" value="12" />
+  <parameter name="AUTO_MEM_CLK_CLOCK_RATE" value="400000000" />
+  <parameter name="AUTO_MEM_CLK_RESET_DOMAIN" value="12" />
+  <parameter name="AUTO_SYS_CLK_CLOCK_DOMAIN" value="4" />
+  <parameter name="AUTO_SYS_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="AUTO_SYS_CLK_RESET_DOMAIN" value="4" />
+  <parameter name="AUTO_UNIQUE_ID">$${FILENAME}_fmcomms2</parameter>
  </module>
  <module
    name="fpga_m"
@@ -1604,12 +1750,117 @@
   <parameter name="width" value="4" />
  </module>
  <module
-   name="onchip_memory2_0"
+   name="pb_lwh2f"
+   kind="altera_avalon_mm_bridge"
+   version="16.1"
+   enabled="1">
+  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
+  <parameter name="ADDRESS_WIDTH" value="20" />
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="LINEWRAPBURSTS" value="0" />
+  <parameter name="MAX_BURST_SIZE" value="1" />
+  <parameter name="MAX_PENDING_RESPONSES" value="1" />
+  <parameter name="PIPELINE_COMMAND" value="1" />
+  <parameter name="PIPELINE_RESPONSE" value="1" />
+  <parameter name="SYMBOL_WIDTH" value="8" />
+  <parameter name="SYSINFO_ADDR_WIDTH" value="9" />
+  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="1" />
+  <parameter name="USE_RESPONSE" value="0" />
+ </module>
+ <module
+   name="reset_bridge"
+   kind="altera_reset_bridge"
+   version="16.1"
+   enabled="1">
+  <parameter name="ACTIVE_LOW_RESET" value="0" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
+  <parameter name="NUM_RESET_OUTPUTS" value="1" />
+  <parameter name="SYNCHRONOUS_EDGES" value="deassert" />
+  <parameter name="USE_RESET_REQUEST" value="0" />
+ </module>
+ <module
+   name="sys_cpu_interconnect"
+   kind="altera_axi_bridge"
+   version="16.1"
+   enabled="1">
+  <parameter name="ADDR_WIDTH" value="20" />
+  <parameter name="AXI_VERSION" value="AXI3" />
+  <parameter name="COMBINED_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="COMBINED_ISSUING_CAPABILITY" value="16" />
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="M0_ID_WIDTH" value="12" />
+  <parameter name="READ_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="READ_ADDR_USER_WIDTH" value="64" />
+  <parameter name="READ_DATA_REORDERING_DEPTH" value="1" />
+  <parameter name="READ_DATA_USER_WIDTH" value="64" />
+  <parameter name="READ_ISSUING_CAPABILITY" value="16" />
+  <parameter name="S0_ID_WIDTH" value="12" />
+  <parameter name="USE_M0_ARBURST" value="1" />
+  <parameter name="USE_M0_ARCACHE" value="1" />
+  <parameter name="USE_M0_ARID" value="1" />
+  <parameter name="USE_M0_ARLEN" value="1" />
+  <parameter name="USE_M0_ARLOCK" value="1" />
+  <parameter name="USE_M0_ARQOS" value="1" />
+  <parameter name="USE_M0_ARREGION" value="1" />
+  <parameter name="USE_M0_ARSIZE" value="1" />
+  <parameter name="USE_M0_ARUSER" value="0" />
+  <parameter name="USE_M0_AWBURST" value="1" />
+  <parameter name="USE_M0_AWCACHE" value="1" />
+  <parameter name="USE_M0_AWID" value="1" />
+  <parameter name="USE_M0_AWLEN" value="1" />
+  <parameter name="USE_M0_AWLOCK" value="1" />
+  <parameter name="USE_M0_AWQOS" value="1" />
+  <parameter name="USE_M0_AWREGION" value="1" />
+  <parameter name="USE_M0_AWSIZE" value="1" />
+  <parameter name="USE_M0_AWUSER" value="0" />
+  <parameter name="USE_M0_BID" value="1" />
+  <parameter name="USE_M0_BRESP" value="1" />
+  <parameter name="USE_M0_BUSER" value="0" />
+  <parameter name="USE_M0_RID" value="1" />
+  <parameter name="USE_M0_RLAST" value="1" />
+  <parameter name="USE_M0_RRESP" value="1" />
+  <parameter name="USE_M0_RUSER" value="0" />
+  <parameter name="USE_M0_WSTRB" value="1" />
+  <parameter name="USE_M0_WUSER" value="0" />
+  <parameter name="USE_PIPELINE" value="1" />
+  <parameter name="USE_S0_ARCACHE" value="1" />
+  <parameter name="USE_S0_ARLOCK" value="1" />
+  <parameter name="USE_S0_ARPROT" value="1" />
+  <parameter name="USE_S0_ARQOS" value="1" />
+  <parameter name="USE_S0_ARREGION" value="1" />
+  <parameter name="USE_S0_ARUSER" value="0" />
+  <parameter name="USE_S0_AWCACHE" value="1" />
+  <parameter name="USE_S0_AWLOCK" value="1" />
+  <parameter name="USE_S0_AWPROT" value="1" />
+  <parameter name="USE_S0_AWQOS" value="1" />
+  <parameter name="USE_S0_AWREGION" value="1" />
+  <parameter name="USE_S0_AWUSER" value="0" />
+  <parameter name="USE_S0_BRESP" value="1" />
+  <parameter name="USE_S0_BUSER" value="0" />
+  <parameter name="USE_S0_RRESP" value="1" />
+  <parameter name="USE_S0_RUSER" value="0" />
+  <parameter name="USE_S0_WLAST" value="1" />
+  <parameter name="USE_S0_WUSER" value="0" />
+  <parameter name="WRITE_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="WRITE_ADDR_USER_WIDTH" value="64" />
+  <parameter name="WRITE_DATA_USER_WIDTH" value="64" />
+  <parameter name="WRITE_ISSUING_CAPABILITY" value="16" />
+  <parameter name="WRITE_RESP_USER_WIDTH" value="64" />
+ </module>
+ <module
+   name="sys_id"
+   kind="altera_avalon_sysid_qsys"
+   version="16.1"
+   enabled="1">
+  <parameter name="id" value="-1073195008" />
+ </module>
+ <module
+   name="sys_inti_mem"
    kind="altera_avalon_onchip_memory2"
    version="16.1"
    enabled="1">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName">ghrd_10as066n2_onchip_memory2_0</parameter>
+  <parameter name="autoInitializationFileName">$${FILENAME}_sys_inti_mem</parameter>
   <parameter name="blockType" value="AUTO" />
   <parameter name="copyInitFile" value="false" />
   <parameter name="dataWidth" value="8" />
@@ -1636,46 +1887,148 @@
   <parameter name="writable" value="true" />
  </module>
  <module
-   name="pb_lwh2f"
-   kind="altera_avalon_mm_bridge"
+   name="sys_mem_interconnect_axi0"
+   kind="altera_axi_bridge"
    version="16.1"
    enabled="1">
-  <parameter name="ADDRESS_UNITS" value="SYMBOLS" />
-  <parameter name="ADDRESS_WIDTH" value="20" />
-  <parameter name="DATA_WIDTH" value="32" />
-  <parameter name="LINEWRAPBURSTS" value="0" />
-  <parameter name="MAX_BURST_SIZE" value="1" />
-  <parameter name="MAX_PENDING_RESPONSES" value="1" />
-  <parameter name="PIPELINE_COMMAND" value="1" />
-  <parameter name="PIPELINE_RESPONSE" value="1" />
-  <parameter name="SYMBOL_WIDTH" value="8" />
-  <parameter name="SYSINFO_ADDR_WIDTH" value="9" />
-  <parameter name="USE_AUTO_ADDRESS_WIDTH" value="1" />
-  <parameter name="USE_RESPONSE" value="0" />
+  <parameter name="ADDR_WIDTH" value="32" />
+  <parameter name="AXI_VERSION" value="AXI3" />
+  <parameter name="COMBINED_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="COMBINED_ISSUING_CAPABILITY" value="16" />
+  <parameter name="DATA_WIDTH" value="64" />
+  <parameter name="M0_ID_WIDTH" value="4" />
+  <parameter name="READ_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="READ_ADDR_USER_WIDTH" value="64" />
+  <parameter name="READ_DATA_REORDERING_DEPTH" value="1" />
+  <parameter name="READ_DATA_USER_WIDTH" value="64" />
+  <parameter name="READ_ISSUING_CAPABILITY" value="16" />
+  <parameter name="S0_ID_WIDTH" value="4" />
+  <parameter name="USE_M0_ARBURST" value="1" />
+  <parameter name="USE_M0_ARCACHE" value="1" />
+  <parameter name="USE_M0_ARID" value="1" />
+  <parameter name="USE_M0_ARLEN" value="1" />
+  <parameter name="USE_M0_ARLOCK" value="1" />
+  <parameter name="USE_M0_ARQOS" value="1" />
+  <parameter name="USE_M0_ARREGION" value="1" />
+  <parameter name="USE_M0_ARSIZE" value="1" />
+  <parameter name="USE_M0_ARUSER" value="0" />
+  <parameter name="USE_M0_AWBURST" value="1" />
+  <parameter name="USE_M0_AWCACHE" value="1" />
+  <parameter name="USE_M0_AWID" value="1" />
+  <parameter name="USE_M0_AWLEN" value="1" />
+  <parameter name="USE_M0_AWLOCK" value="1" />
+  <parameter name="USE_M0_AWQOS" value="1" />
+  <parameter name="USE_M0_AWREGION" value="1" />
+  <parameter name="USE_M0_AWSIZE" value="1" />
+  <parameter name="USE_M0_AWUSER" value="0" />
+  <parameter name="USE_M0_BID" value="1" />
+  <parameter name="USE_M0_BRESP" value="1" />
+  <parameter name="USE_M0_BUSER" value="0" />
+  <parameter name="USE_M0_RID" value="1" />
+  <parameter name="USE_M0_RLAST" value="1" />
+  <parameter name="USE_M0_RRESP" value="1" />
+  <parameter name="USE_M0_RUSER" value="0" />
+  <parameter name="USE_M0_WSTRB" value="1" />
+  <parameter name="USE_M0_WUSER" value="0" />
+  <parameter name="USE_PIPELINE" value="1" />
+  <parameter name="USE_S0_ARCACHE" value="1" />
+  <parameter name="USE_S0_ARLOCK" value="1" />
+  <parameter name="USE_S0_ARPROT" value="1" />
+  <parameter name="USE_S0_ARQOS" value="1" />
+  <parameter name="USE_S0_ARREGION" value="1" />
+  <parameter name="USE_S0_ARUSER" value="0" />
+  <parameter name="USE_S0_AWCACHE" value="1" />
+  <parameter name="USE_S0_AWLOCK" value="1" />
+  <parameter name="USE_S0_AWPROT" value="1" />
+  <parameter name="USE_S0_AWQOS" value="1" />
+  <parameter name="USE_S0_AWREGION" value="1" />
+  <parameter name="USE_S0_AWUSER" value="0" />
+  <parameter name="USE_S0_BRESP" value="1" />
+  <parameter name="USE_S0_BUSER" value="0" />
+  <parameter name="USE_S0_RRESP" value="1" />
+  <parameter name="USE_S0_RUSER" value="0" />
+  <parameter name="USE_S0_WLAST" value="1" />
+  <parameter name="USE_S0_WUSER" value="0" />
+  <parameter name="WRITE_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="WRITE_ADDR_USER_WIDTH" value="64" />
+  <parameter name="WRITE_DATA_USER_WIDTH" value="64" />
+  <parameter name="WRITE_ISSUING_CAPABILITY" value="16" />
+  <parameter name="WRITE_RESP_USER_WIDTH" value="64" />
  </module>
  <module
-   name="reset_bridge_0"
-   kind="altera_reset_bridge"
+   name="sys_mem_interconnect_axi1"
+   kind="altera_axi_bridge"
    version="16.1"
    enabled="1">
-  <parameter name="ACTIVE_LOW_RESET" value="0" />
-  <parameter name="AUTO_CLK_CLOCK_RATE" value="100000000" />
-  <parameter name="NUM_RESET_OUTPUTS" value="1" />
-  <parameter name="SYNCHRONOUS_EDGES" value="deassert" />
-  <parameter name="USE_RESET_REQUEST" value="0" />
- </module>
- <module
-   name="sysid_qsys_0"
-   kind="altera_avalon_sysid_qsys"
-   version="16.1"
-   enabled="1">
-  <parameter name="id" value="-1073195008" />
+  <parameter name="ADDR_WIDTH" value="32" />
+  <parameter name="AXI_VERSION" value="AXI3" />
+  <parameter name="COMBINED_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="COMBINED_ISSUING_CAPABILITY" value="16" />
+  <parameter name="DATA_WIDTH" value="64" />
+  <parameter name="M0_ID_WIDTH" value="4" />
+  <parameter name="READ_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="READ_ADDR_USER_WIDTH" value="64" />
+  <parameter name="READ_DATA_REORDERING_DEPTH" value="1" />
+  <parameter name="READ_DATA_USER_WIDTH" value="64" />
+  <parameter name="READ_ISSUING_CAPABILITY" value="16" />
+  <parameter name="S0_ID_WIDTH" value="4" />
+  <parameter name="USE_M0_ARBURST" value="1" />
+  <parameter name="USE_M0_ARCACHE" value="1" />
+  <parameter name="USE_M0_ARID" value="1" />
+  <parameter name="USE_M0_ARLEN" value="1" />
+  <parameter name="USE_M0_ARLOCK" value="1" />
+  <parameter name="USE_M0_ARQOS" value="1" />
+  <parameter name="USE_M0_ARREGION" value="1" />
+  <parameter name="USE_M0_ARSIZE" value="1" />
+  <parameter name="USE_M0_ARUSER" value="0" />
+  <parameter name="USE_M0_AWBURST" value="1" />
+  <parameter name="USE_M0_AWCACHE" value="1" />
+  <parameter name="USE_M0_AWID" value="1" />
+  <parameter name="USE_M0_AWLEN" value="1" />
+  <parameter name="USE_M0_AWLOCK" value="1" />
+  <parameter name="USE_M0_AWQOS" value="1" />
+  <parameter name="USE_M0_AWREGION" value="1" />
+  <parameter name="USE_M0_AWSIZE" value="1" />
+  <parameter name="USE_M0_AWUSER" value="0" />
+  <parameter name="USE_M0_BID" value="1" />
+  <parameter name="USE_M0_BRESP" value="1" />
+  <parameter name="USE_M0_BUSER" value="0" />
+  <parameter name="USE_M0_RID" value="1" />
+  <parameter name="USE_M0_RLAST" value="1" />
+  <parameter name="USE_M0_RRESP" value="1" />
+  <parameter name="USE_M0_RUSER" value="0" />
+  <parameter name="USE_M0_WSTRB" value="1" />
+  <parameter name="USE_M0_WUSER" value="0" />
+  <parameter name="USE_PIPELINE" value="1" />
+  <parameter name="USE_S0_ARCACHE" value="1" />
+  <parameter name="USE_S0_ARLOCK" value="1" />
+  <parameter name="USE_S0_ARPROT" value="1" />
+  <parameter name="USE_S0_ARQOS" value="1" />
+  <parameter name="USE_S0_ARREGION" value="1" />
+  <parameter name="USE_S0_ARUSER" value="0" />
+  <parameter name="USE_S0_AWCACHE" value="1" />
+  <parameter name="USE_S0_AWLOCK" value="1" />
+  <parameter name="USE_S0_AWPROT" value="1" />
+  <parameter name="USE_S0_AWQOS" value="1" />
+  <parameter name="USE_S0_AWREGION" value="1" />
+  <parameter name="USE_S0_AWUSER" value="0" />
+  <parameter name="USE_S0_BRESP" value="1" />
+  <parameter name="USE_S0_BUSER" value="0" />
+  <parameter name="USE_S0_RRESP" value="1" />
+  <parameter name="USE_S0_RUSER" value="0" />
+  <parameter name="USE_S0_WLAST" value="1" />
+  <parameter name="USE_S0_WUSER" value="0" />
+  <parameter name="WRITE_ACCEPTANCE_CAPABILITY" value="16" />
+  <parameter name="WRITE_ADDR_USER_WIDTH" value="64" />
+  <parameter name="WRITE_DATA_USER_WIDTH" value="64" />
+  <parameter name="WRITE_ISSUING_CAPABILITY" value="16" />
+  <parameter name="WRITE_RESP_USER_WIDTH" value="64" />
  </module>
  <connection
    kind="avalon"
    version="16.1"
-   start="arria10_hps_0.h2f_axi_master"
-   end="onchip_memory2_0.s1">
+   start="fmcomms2.axi_ad9361_adc_dma_m_dest_axi"
+   end="sys_mem_interconnect_axi0.s0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -1683,10 +2036,55 @@
  <connection
    kind="avalon"
    version="16.1"
-   start="arria10_hps_0.h2f_lw_axi_master"
+   start="fmcomms2.axi_ad9361_dac_dma_m_src_axi"
+   end="sys_mem_interconnect_axi1.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="arria10_hps.h2f_axi_master"
+   end="sys_inti_mem.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="arria10_hps.h2f_lw_axi_master"
+   end="fmcomms2.gpio_s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0290" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="arria10_hps.h2f_lw_axi_master"
    end="pb_lwh2f.s0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="arria10_hps.h2f_lw_axi_master"
+   end="sys_cpu_interconnect.s0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00100000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="arria10_hps.h2f_lw_axi_master"
+   end="fmcomms2.spi_ad9361_spi_control_port">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02c0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -1701,8 +2099,53 @@
  <connection
    kind="avalon"
    version="16.1"
+   start="sys_cpu_interconnect.m0"
+   end="fmcomms2.axi_ad9361_adc_dma_s_axi">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00010000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="sys_cpu_interconnect.m0"
+   end="fmcomms2.axi_ad9361_dac_dma_s_axi">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00014000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="sys_cpu_interconnect.m0"
+   end="fmcomms2.axi_ad9361_s_axi">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
    start="pb_lwh2f.m0"
-   end="sysid_qsys_0.control_slave">
+   end="sys_id.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="sys_mem_interconnect_axi0.m0"
+   end="arria10_hps.f2sdram0_data">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="16.1"
+   start="sys_mem_interconnect_axi1.m0"
+   end="arria10_hps.f2sdram2_data">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -1726,25 +2169,7 @@
    kind="avalon"
    version="16.1"
    start="hps_m.master"
-   end="arria10_hps_0.f2h_axi_slave">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="16.1"
-   start="f2sdram_m1.master"
-   end="arria10_hps_0.f2sdram0_data">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x0000" />
-  <parameter name="defaultConnection" value="false" />
- </connection>
- <connection
-   kind="avalon"
-   version="16.1"
-   start="f2sdram_m.master"
-   end="arria10_hps_0.f2sdram2_data">
+   end="arria10_hps.f2h_axi_slave">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
@@ -1754,17 +2179,11 @@
   <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="clock" version="16.1" start="clk_0.clk" end="f2sdram_m.clk" />
- <connection kind="clock" version="16.1" start="clk_0.clk" end="f2sdram_m1.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="hps_m.clk" />
- <connection
-   kind="clock"
-   version="16.1"
-   start="clk_0.clk"
-   end="reset_bridge_0.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="reset_bridge.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="fpga_m.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="pb_lwh2f.clk" />
- <connection kind="clock" version="16.1" start="clk_0.clk" end="sysid_qsys_0.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="sys_id.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="led_pio.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="button_pio.clk" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="dipsw_pio.clk" />
@@ -1773,38 +2192,60 @@
    kind="clock"
    version="16.1"
    start="clk_0.clk"
-   end="onchip_memory2_0.clk1" />
+   end="sys_cpu_interconnect.clk" />
  <connection
    kind="clock"
    version="16.1"
    start="clk_0.clk"
-   end="arria10_hps_0.f2h_axi_clock" />
+   end="sys_mem_interconnect_axi0.clk" />
  <connection
    kind="clock"
    version="16.1"
    start="clk_0.clk"
-   end="arria10_hps_0.f2sdram0_clock" />
+   end="sys_mem_interconnect_axi1.clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="sys_inti_mem.clk1" />
  <connection
    kind="clock"
    version="16.1"
    start="clk_0.clk"
-   end="arria10_hps_0.f2sdram2_clock" />
+   end="fmcomms2.delay_clk" />
  <connection
    kind="clock"
    version="16.1"
    start="clk_0.clk"
-   end="arria10_hps_0.h2f_axi_clock" />
+   end="arria10_hps.f2h_axi_clock" />
  <connection
    kind="clock"
    version="16.1"
    start="clk_0.clk"
-   end="arria10_hps_0.h2f_lw_axi_clock" />
+   end="arria10_hps.f2sdram0_clock" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="clk_0.clk"
+   end="arria10_hps.f2sdram2_clock" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="clk_0.clk"
+   end="arria10_hps.h2f_axi_clock" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="clk_0.clk"
+   end="arria10_hps.h2f_lw_axi_clock" />
  <connection kind="clock" version="16.1" start="clk_0.clk" end="issp_0.source_clk" />
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="fmcomms2.sys_clk" />
+ <connection
+   kind="clock"
+   version="16.1"
+   start="arria10_hps.h2f_user0_clock"
+   end="fmcomms2.mem_clk" />
  <connection
    kind="conduit"
    version="16.1"
-   start="arria10_hps_0.emif"
-   end="emif_a10_hps_0.hps_emif_conduit_end">
+   start="arria10_hps.emif"
+   end="emif_a10_hps.hps_emif_conduit_end">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />
@@ -1814,16 +2255,37 @@
  <connection
    kind="interrupt"
    version="16.1"
-   start="arria10_hps_0.f2h_irq0"
+   start="arria10_hps.f2h_irq0"
+   end="fmcomms2.axi_ad9361_adc_dma_intr">
+  <parameter name="irqNumber" value="3" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="16.1"
+   start="arria10_hps.f2h_irq0"
+   end="fmcomms2.axi_ad9361_dac_dma_intr">
+  <parameter name="irqNumber" value="2" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="16.1"
+   start="arria10_hps.f2h_irq0"
    end="button_pio.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="interrupt"
    version="16.1"
-   start="arria10_hps_0.f2h_irq0"
+   start="arria10_hps.f2h_irq0"
    end="dipsw_pio.irq">
   <parameter name="irqNumber" value="1" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="16.1"
+   start="arria10_hps.f2h_irq0"
+   end="fmcomms2.spi_ad9361_irq">
+  <parameter name="irqNumber" value="4" />
  </connection>
  <connection kind="interrupt" version="16.1" start="ILC.irq" end="button_pio.irq">
   <parameter name="irqNumber" value="0" />
@@ -1835,16 +2297,6 @@
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="f2sdram_m.clk_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="clk_0.clk_reset"
-   end="f2sdram_m1.clk_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="clk_0.clk_reset"
    end="hps_m.clk_reset" />
  <connection
    kind="reset"
@@ -1855,37 +2307,47 @@
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="arria10_hps_0.f2h_axi_reset" />
+   end="sys_cpu_interconnect.clk_reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="arria10_hps_0.f2sdram0_reset" />
+   end="sys_mem_interconnect_axi0.clk_reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="arria10_hps_0.f2sdram2_reset" />
+   end="sys_mem_interconnect_axi1.clk_reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="emif_a10_hps_0.global_reset_reset_sink" />
+   end="arria10_hps.f2sdram0_reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="arria10_hps_0.h2f_axi_reset" />
+   end="arria10_hps.f2sdram2_reset" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="arria10_hps_0.h2f_lw_axi_reset" />
+   end="emif_a10_hps.global_reset_reset_sink" />
  <connection
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="reset_bridge_0.in_reset" />
+   end="arria10_hps.h2f_lw_axi_reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="reset_bridge.in_reset" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="fmcomms2.mem_rst" />
  <connection
    kind="reset"
    version="16.1"
@@ -1895,7 +2357,7 @@
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="sysid_qsys_0.reset" />
+   end="sys_id.reset" />
  <connection
    kind="reset"
    version="16.1"
@@ -1915,92 +2377,67 @@
    kind="reset"
    version="16.1"
    start="clk_0.clk_reset"
-   end="onchip_memory2_0.reset1" />
+   end="sys_inti_mem.reset1" />
  <connection kind="reset" version="16.1" start="clk_0.clk_reset" end="ILC.reset_n" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="f2sdram_m.clk_reset" />
+   start="clk_0.clk_reset"
+   end="fmcomms2.sys_rst" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="f2sdram_m1.clk_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="hps_m.clk_reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="fpga_m.clk_reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="arria10_hps_0.f2h_axi_reset" />
+   start="arria10_hps.h2f_reset"
+   end="arria10_hps.h2f_lw_axi_reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="arria10_hps_0.f2sdram0_reset" />
+   start="arria10_hps.h2f_reset"
+   end="reset_bridge.in_reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="arria10_hps_0.f2sdram2_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="arria10_hps_0.h2f_axi_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="arria10_hps_0.h2f_lw_axi_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="reset_bridge_0.in_reset" />
- <connection
-   kind="reset"
-   version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="pb_lwh2f.reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="sysid_qsys_0.reset" />
+   start="arria10_hps.h2f_reset"
+   end="sys_id.reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="led_pio.reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="button_pio.reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="dipsw_pio.reset" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
-   end="onchip_memory2_0.reset1" />
+   start="arria10_hps.h2f_reset"
+   end="sys_inti_mem.reset1" />
  <connection
    kind="reset"
    version="16.1"
-   start="arria10_hps_0.h2f_reset"
+   start="arria10_hps.h2f_reset"
    end="ILC.reset_n" />
  <interconnectRequirement
    for="$system"

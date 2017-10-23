@@ -1,0 +1,5 @@
+config ad_cmos_out_core_a10_cfg;
+		design ad_cmos_out_core_a10;
+		instance ad_cmos_out_core_a10.ad_cmos_out_core_a10 use ghrd_10as066n2_alt_serdes_10.ghrd_10as066n2_alt_serdes_10_v6injpq;
+endconfig
+

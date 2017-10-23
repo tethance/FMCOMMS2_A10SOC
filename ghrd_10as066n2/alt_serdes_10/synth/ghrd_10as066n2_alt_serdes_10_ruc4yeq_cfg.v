@@ -1,0 +1,5 @@
+config ghrd_10as066n2_alt_serdes_10_ruc4yeq_cfg;
+		design ghrd_10as066n2_alt_serdes_10_ruc4yeq;
+		instance ghrd_10as066n2_alt_serdes_10_ruc4yeq.alt_serdes_pll use ghrd_10as066n2_altera_iopll_161.ghrd_10as066n2_altera_iopll_161_sacslaa;
+endconfig
+

@@ -4,20 +4,18 @@ Progress: Loading FMCOMMS2_A10SOC/ghrd_10as066n2.qsys
 Progress: Reading input file
 Progress: Adding ILC [interrupt_latency_counter 16.1]
 Progress: Parameterizing module ILC
-Progress: Adding arria10_hps_0 [altera_arria10_hps 16.1]
-Progress: Parameterizing module arria10_hps_0
+Progress: Adding arria10_hps [altera_arria10_hps 16.1]
+Progress: Parameterizing module arria10_hps
 Progress: Adding button_pio [altera_avalon_pio 16.1]
 Progress: Parameterizing module button_pio
 Progress: Adding clk_0 [clock_source 16.1]
 Progress: Parameterizing module clk_0
 Progress: Adding dipsw_pio [altera_avalon_pio 16.1]
 Progress: Parameterizing module dipsw_pio
-Progress: Adding emif_a10_hps_0 [altera_emif_a10_hps 16.1]
-Progress: Parameterizing module emif_a10_hps_0
-Progress: Adding f2sdram_m [altera_jtag_avalon_master 16.1]
-Progress: Parameterizing module f2sdram_m
-Progress: Adding f2sdram_m1 [altera_jtag_avalon_master 16.1]
-Progress: Parameterizing module f2sdram_m1
+Progress: Adding emif_a10_hps [altera_emif_a10_hps 16.1]
+Progress: Parameterizing module emif_a10_hps
+Progress: Adding fmcomms2 [fmcomms2_v161 1.0]
+Progress: Parameterizing module fmcomms2
 Progress: Adding fpga_m [altera_jtag_avalon_master 16.1]
 Progress: Parameterizing module fpga_m
 Progress: Adding hps_m [altera_jtag_avalon_master 16.1]
@@ -26,29 +24,57 @@ Progress: Adding issp_0 [altera_in_system_sources_probes 16.1]
 Progress: Parameterizing module issp_0
 Progress: Adding led_pio [altera_avalon_pio 16.1]
 Progress: Parameterizing module led_pio
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
-Progress: Parameterizing module onchip_memory2_0
 Progress: Adding pb_lwh2f [altera_avalon_mm_bridge 16.1]
 Progress: Parameterizing module pb_lwh2f
-Progress: Adding reset_bridge_0 [altera_reset_bridge 16.1]
-Progress: Parameterizing module reset_bridge_0
-Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 16.1]
-Progress: Parameterizing module sysid_qsys_0
+Progress: Adding reset_bridge [altera_reset_bridge 16.1]
+Progress: Parameterizing module reset_bridge
+Progress: Adding sys_cpu_interconnect [altera_axi_bridge 16.1]
+Progress: Parameterizing module sys_cpu_interconnect
+Progress: Adding sys_id [altera_avalon_sysid_qsys 16.1]
+Progress: Parameterizing module sys_id
+Progress: Adding sys_inti_mem [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module sys_inti_mem
+Progress: Adding sys_mem_interconnect_axi0 [altera_axi_bridge 16.1]
+Progress: Parameterizing module sys_mem_interconnect_axi0
+Progress: Adding sys_mem_interconnect_axi1 [altera_axi_bridge 16.1]
+Progress: Parameterizing module sys_mem_interconnect_axi1
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: ghrd_10as066n2.arria10_hps_0: HPS NOC (L3 clock) is set to 200 MHz When the Max Speed for this part is 400 MHz.
+Info: ghrd_10as066n2.arria10_hps: HPS NOC (L3 clock) is set to 200 MHz When the Max Speed for this part is 400 MHz.
 Info: ghrd_10as066n2.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: ghrd_10as066n2.dipsw_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: ghrd_10as066n2.emif_a10_hps_0: Debug features for HPS are currently not supported.
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: Placement of address/command pins must follow "DDR4 Scheme 4: Component/UDIMM/RDIMM".
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: Interface estimated to require 2 I/O Bank(s) and 2 I/O PLL(s). This is only an estimation. Final usage depends on user pin location assignments and/or fitter behavior.
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: Valid memory frequencies for the current PLL reference clock and user clock rate, in MHz: 1333.33, 1066.66, 800.0
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: For additional documentation about the interface, consult the *_readme.txt file after generation.
+Info: ghrd_10as066n2.emif_a10_hps: Debug features for HPS are currently not supported.
+Info: ghrd_10as066n2.emif_a10_hps.arch: Placement of address/command pins must follow "DDR4 Scheme 4: Component/UDIMM/RDIMM".
+Info: ghrd_10as066n2.emif_a10_hps.arch: Interface estimated to require 2 I/O Bank(s) and 2 I/O PLL(s). This is only an estimation. Final usage depends on user pin location assignments and/or fitter behavior.
+Info: ghrd_10as066n2.emif_a10_hps.arch: Valid memory frequencies for the current PLL reference clock and user clock rate, in MHz: 1333.33, 1066.66, 800.0
+Info: ghrd_10as066n2.emif_a10_hps.arch: For additional documentation about the interface, consult the *_readme.txt file after generation.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_sync_in must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_sync_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_tdd_sync must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_tdd_sync_cntr must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_adc_dunf must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_adc_r1_mode must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_dovf must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_r1_mode must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_dac_gpio_in must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_dac_gpio_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_adc_gpio_in must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_adc_gpio_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361_adc_dma: axi_ad9361_adc_dma.if_fifo_wr_xfer_req must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361_dac_dma: axi_ad9361_dac_dma.if_fifo_rd_valid must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.util_ad9361_dac_upack: util_ad9361_dac_upack.if_dac_xfer_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.util_ad9361_dac_upack: util_ad9361_dac_upack.if_dac_sync must be exported, or connected to a matching conduit.
 Info: ghrd_10as066n2.led_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: ghrd_10as066n2.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
-Info: ghrd_10as066n2.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: ghrd_10as066n2.sys_cpu_interconnect: Burst length BURST_LENGTH_WIDTH 4
+Info: ghrd_10as066n2.sys_cpu_interconnect: Lock signals width LOCK_WIDTH 2
+Info: ghrd_10as066n2.sys_id: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: ghrd_10as066n2.sys_id: Time stamp will be automatically updated when this component is generated.
+Info: ghrd_10as066n2.sys_mem_interconnect_axi0: Burst length BURST_LENGTH_WIDTH 4
+Info: ghrd_10as066n2.sys_mem_interconnect_axi0: Lock signals width LOCK_WIDTH 2
+Info: ghrd_10as066n2.sys_mem_interconnect_axi1: Burst length BURST_LENGTH_WIDTH 4
+Info: ghrd_10as066n2.sys_mem_interconnect_axi1: Lock signals width LOCK_WIDTH 2
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -58,20 +84,18 @@ Progress: Loading FMCOMMS2_A10SOC/ghrd_10as066n2.qsys
 Progress: Reading input file
 Progress: Adding ILC [interrupt_latency_counter 16.1]
 Progress: Parameterizing module ILC
-Progress: Adding arria10_hps_0 [altera_arria10_hps 16.1]
-Progress: Parameterizing module arria10_hps_0
+Progress: Adding arria10_hps [altera_arria10_hps 16.1]
+Progress: Parameterizing module arria10_hps
 Progress: Adding button_pio [altera_avalon_pio 16.1]
 Progress: Parameterizing module button_pio
 Progress: Adding clk_0 [clock_source 16.1]
 Progress: Parameterizing module clk_0
 Progress: Adding dipsw_pio [altera_avalon_pio 16.1]
 Progress: Parameterizing module dipsw_pio
-Progress: Adding emif_a10_hps_0 [altera_emif_a10_hps 16.1]
-Progress: Parameterizing module emif_a10_hps_0
-Progress: Adding f2sdram_m [altera_jtag_avalon_master 16.1]
-Progress: Parameterizing module f2sdram_m
-Progress: Adding f2sdram_m1 [altera_jtag_avalon_master 16.1]
-Progress: Parameterizing module f2sdram_m1
+Progress: Adding emif_a10_hps [altera_emif_a10_hps 16.1]
+Progress: Parameterizing module emif_a10_hps
+Progress: Adding fmcomms2 [fmcomms2_v161 1.0]
+Progress: Parameterizing module fmcomms2
 Progress: Adding fpga_m [altera_jtag_avalon_master 16.1]
 Progress: Parameterizing module fpga_m
 Progress: Adding hps_m [altera_jtag_avalon_master 16.1]
@@ -80,47 +104,75 @@ Progress: Adding issp_0 [altera_in_system_sources_probes 16.1]
 Progress: Parameterizing module issp_0
 Progress: Adding led_pio [altera_avalon_pio 16.1]
 Progress: Parameterizing module led_pio
-Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
-Progress: Parameterizing module onchip_memory2_0
 Progress: Adding pb_lwh2f [altera_avalon_mm_bridge 16.1]
 Progress: Parameterizing module pb_lwh2f
-Progress: Adding reset_bridge_0 [altera_reset_bridge 16.1]
-Progress: Parameterizing module reset_bridge_0
-Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 16.1]
-Progress: Parameterizing module sysid_qsys_0
+Progress: Adding reset_bridge [altera_reset_bridge 16.1]
+Progress: Parameterizing module reset_bridge
+Progress: Adding sys_cpu_interconnect [altera_axi_bridge 16.1]
+Progress: Parameterizing module sys_cpu_interconnect
+Progress: Adding sys_id [altera_avalon_sysid_qsys 16.1]
+Progress: Parameterizing module sys_id
+Progress: Adding sys_inti_mem [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module sys_inti_mem
+Progress: Adding sys_mem_interconnect_axi0 [altera_axi_bridge 16.1]
+Progress: Parameterizing module sys_mem_interconnect_axi0
+Progress: Adding sys_mem_interconnect_axi1 [altera_axi_bridge 16.1]
+Progress: Parameterizing module sys_mem_interconnect_axi1
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Info: ghrd_10as066n2.arria10_hps_0: HPS NOC (L3 clock) is set to 200 MHz When the Max Speed for this part is 400 MHz.
+Info: ghrd_10as066n2.arria10_hps: HPS NOC (L3 clock) is set to 200 MHz When the Max Speed for this part is 400 MHz.
 Info: ghrd_10as066n2.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: ghrd_10as066n2.dipsw_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: ghrd_10as066n2.emif_a10_hps_0: Debug features for HPS are currently not supported.
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: Placement of address/command pins must follow "DDR4 Scheme 4: Component/UDIMM/RDIMM".
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: Interface estimated to require 2 I/O Bank(s) and 2 I/O PLL(s). This is only an estimation. Final usage depends on user pin location assignments and/or fitter behavior.
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: Valid memory frequencies for the current PLL reference clock and user clock rate, in MHz: 1333.33, 1066.66, 800.0
-Info: ghrd_10as066n2.emif_a10_hps_0.arch: For additional documentation about the interface, consult the *_readme.txt file after generation.
+Info: ghrd_10as066n2.emif_a10_hps: Debug features for HPS are currently not supported.
+Info: ghrd_10as066n2.emif_a10_hps.arch: Placement of address/command pins must follow "DDR4 Scheme 4: Component/UDIMM/RDIMM".
+Info: ghrd_10as066n2.emif_a10_hps.arch: Interface estimated to require 2 I/O Bank(s) and 2 I/O PLL(s). This is only an estimation. Final usage depends on user pin location assignments and/or fitter behavior.
+Info: ghrd_10as066n2.emif_a10_hps.arch: Valid memory frequencies for the current PLL reference clock and user clock rate, in MHz: 1333.33, 1066.66, 800.0
+Info: ghrd_10as066n2.emif_a10_hps.arch: For additional documentation about the interface, consult the *_readme.txt file after generation.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_sync_in must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_sync_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_tdd_sync must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_tdd_sync_cntr must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_adc_dunf must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_adc_r1_mode must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_dovf must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_dac_r1_mode must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_dac_gpio_in must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_dac_gpio_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_adc_gpio_in must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361: axi_ad9361.if_up_adc_gpio_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361_adc_dma: axi_ad9361_adc_dma.if_fifo_wr_xfer_req must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.axi_ad9361_dac_dma: axi_ad9361_dac_dma.if_fifo_rd_valid must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.util_ad9361_dac_upack: util_ad9361_dac_upack.if_dac_xfer_out must be exported, or connected to a matching conduit.
+Warning: ghrd_10as066n2.fmcomms2.util_ad9361_dac_upack: util_ad9361_dac_upack.if_dac_sync must be exported, or connected to a matching conduit.
 Info: ghrd_10as066n2.led_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: ghrd_10as066n2.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
-Info: ghrd_10as066n2.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: ghrd_10as066n2.sys_cpu_interconnect: Burst length BURST_LENGTH_WIDTH 4
+Info: ghrd_10as066n2.sys_cpu_interconnect: Lock signals width LOCK_WIDTH 2
+Info: ghrd_10as066n2.sys_id: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: ghrd_10as066n2.sys_id: Time stamp will be automatically updated when this component is generated.
+Info: ghrd_10as066n2.sys_mem_interconnect_axi0: Burst length BURST_LENGTH_WIDTH 4
+Info: ghrd_10as066n2.sys_mem_interconnect_axi0: Lock signals width LOCK_WIDTH 2
+Info: ghrd_10as066n2.sys_mem_interconnect_axi1: Burst length BURST_LENGTH_WIDTH 4
+Info: ghrd_10as066n2.sys_mem_interconnect_axi1: Lock signals width LOCK_WIDTH 2
+Info: axi_ad9361.ad_serdes_clk_core.alt_serdes_pll: Able to implement PLL with user settings
+Info: axi_ad9361.ad_cmos_out_core_a10.alt_serdes_out: Altera GPIO supports a maximum interface frequency of 300 MHZ.
 Info: ghrd_10as066n2: "Transforming system: ghrd_10as066n2"
 Info: ghrd_10as066n2: Running transform generation_view_transform
-Info: ghrd_10as066n2: Running transform generation_view_transform took 0.001s
+Info: ghrd_10as066n2: Running transform generation_view_transform took 0.000s
 Info: ILC: Running transform generation_view_transform
 Info: ILC: Running transform generation_view_transform took 0.000s
-Info: arria10_hps_0: Running transform generation_view_transform
-Info: arria10_hps_0: HPS NOC (L3 clock) is set to 200 MHz When the Max Speed for this part is 400 MHz.
-Info: arria10_hps_0: Running transform generation_view_transform took 0.524s
+Info: arria10_hps: Running transform generation_view_transform
+Info: arria10_hps: HPS NOC (L3 clock) is set to 200 MHz When the Max Speed for this part is 400 MHz.
+Info: arria10_hps: Running transform generation_view_transform took 0.507s
 Info: button_pio: Running transform generation_view_transform
 Info: button_pio: Running transform generation_view_transform took 0.000s
 Info: dipsw_pio: Running transform generation_view_transform
 Info: dipsw_pio: Running transform generation_view_transform took 0.000s
-Info: emif_a10_hps_0: Running transform generation_view_transform
-Info: emif_a10_hps_0: Running transform generation_view_transform took 0.000s
-Info: f2sdram_m: Running transform generation_view_transform
-Info: f2sdram_m: Running transform generation_view_transform took 0.000s
-Info: f2sdram_m1: Running transform generation_view_transform
-Info: f2sdram_m1: Running transform generation_view_transform took 0.000s
+Info: emif_a10_hps: Running transform generation_view_transform
+Info: emif_a10_hps: Running transform generation_view_transform took 0.000s
+Info: fmcomms2: Running transform generation_view_transform
+Info: fmcomms2: Running transform generation_view_transform took 0.000s
 Info: fpga_m: Running transform generation_view_transform
 Info: fpga_m: Running transform generation_view_transform took 0.000s
 Info: hps_m: Running transform generation_view_transform
@@ -129,60 +181,50 @@ Info: issp_0: Running transform generation_view_transform
 Info: issp_0: Running transform generation_view_transform took 0.000s
 Info: led_pio: Running transform generation_view_transform
 Info: led_pio: Running transform generation_view_transform took 0.000s
-Info: onchip_memory2_0: Running transform generation_view_transform
-Info: onchip_memory2_0: Running transform generation_view_transform took 0.000s
 Info: pb_lwh2f: Running transform generation_view_transform
 Info: pb_lwh2f: Running transform generation_view_transform took 0.000s
-Info: reset_bridge_0: Running transform generation_view_transform
-Info: reset_bridge_0: Running transform generation_view_transform took 0.000s
-Info: sysid_qsys_0: Running transform generation_view_transform
-Info: sysid_qsys_0: Running transform generation_view_transform took 0.000s
+Info: reset_bridge: Running transform generation_view_transform
+Info: reset_bridge: Running transform generation_view_transform took 0.000s
+Info: sys_cpu_interconnect: Running transform generation_view_transform
+Info: sys_cpu_interconnect: Running transform generation_view_transform took 0.000s
+Info: sys_id: Running transform generation_view_transform
+Info: sys_id: Running transform generation_view_transform took 0.000s
+Info: sys_inti_mem: Running transform generation_view_transform
+Info: sys_inti_mem: Running transform generation_view_transform took 0.000s
+Info: sys_mem_interconnect_axi0: Running transform generation_view_transform
+Info: sys_mem_interconnect_axi0: Running transform generation_view_transform took 0.000s
+Info: sys_mem_interconnect_axi1: Running transform generation_view_transform
+Info: sys_mem_interconnect_axi1: Running transform generation_view_transform took 0.000s
 Info: fpga_interfaces: Running transform generation_view_transform
 Info: fpga_interfaces: Running transform generation_view_transform took 0.000s
 Info: hps_io: Running transform generation_view_transform
 Info: hps_io: Running transform generation_view_transform took 0.000s
 Info: arch: Running transform generation_view_transform
 Info: arch: Running transform generation_view_transform took 0.000s
-Info: clk_src: Running transform generation_view_transform
-Info: clk_src: Running transform generation_view_transform took 0.000s
-Info: clk_rst: Running transform generation_view_transform
-Info: clk_rst: Running transform generation_view_transform took 0.000s
-Info: jtag_phy_embedded_in_jtag_master: Running transform generation_view_transform
-Info: jtag_phy_embedded_in_jtag_master: Running transform generation_view_transform took 0.000s
-Info: timing_adt: Running transform generation_view_transform
-Info: timing_adt: Running transform generation_view_transform took 0.000s
-Info: fifo: Running transform generation_view_transform
-Info: fifo: Running transform generation_view_transform took 0.000s
-Info: b2p: Running transform generation_view_transform
-Info: b2p: Running transform generation_view_transform took 0.000s
-Info: p2b: Running transform generation_view_transform
-Info: p2b: Running transform generation_view_transform took 0.000s
-Info: transacto: Running transform generation_view_transform
-Info: transacto: Running transform generation_view_transform took 0.000s
-Info: b2p_adapter: Running transform generation_view_transform
-Info: b2p_adapter: Running transform generation_view_transform took 0.000s
-Info: p2b_adapter: Running transform generation_view_transform
-Info: p2b_adapter: Running transform generation_view_transform took 0.000s
-Info: clk_src: Running transform generation_view_transform
-Info: clk_src: Running transform generation_view_transform took 0.000s
-Info: clk_rst: Running transform generation_view_transform
-Info: clk_rst: Running transform generation_view_transform took 0.000s
-Info: jtag_phy_embedded_in_jtag_master: Running transform generation_view_transform
-Info: jtag_phy_embedded_in_jtag_master: Running transform generation_view_transform took 0.000s
-Info: timing_adt: Running transform generation_view_transform
-Info: timing_adt: Running transform generation_view_transform took 0.000s
-Info: fifo: Running transform generation_view_transform
-Info: fifo: Running transform generation_view_transform took 0.000s
-Info: b2p: Running transform generation_view_transform
-Info: b2p: Running transform generation_view_transform took 0.000s
-Info: p2b: Running transform generation_view_transform
-Info: p2b: Running transform generation_view_transform took 0.000s
-Info: transacto: Running transform generation_view_transform
-Info: transacto: Running transform generation_view_transform took 0.000s
-Info: b2p_adapter: Running transform generation_view_transform
-Info: b2p_adapter: Running transform generation_view_transform took 0.000s
-Info: p2b_adapter: Running transform generation_view_transform
-Info: p2b_adapter: Running transform generation_view_transform took 0.000s
+Info: ad9361_clk_bridge: Running transform generation_view_transform
+Info: ad9361_clk_bridge: Running transform generation_view_transform took 0.000s
+Info: axi_ad9361_adc_dma: Running transform generation_view_transform
+Info: axi_ad9361_adc_dma: Running transform generation_view_transform took 0.000s
+Info: axi_ad9361_dac_dma: Running transform generation_view_transform
+Info: axi_ad9361_dac_dma: Running transform generation_view_transform took 0.000s
+Info: gpio: Running transform generation_view_transform
+Info: gpio: Running transform generation_view_transform took 0.000s
+Info: mem_clk: Running transform generation_view_transform
+Info: mem_clk: Running transform generation_view_transform took 0.000s
+Info: mem_rst: Running transform generation_view_transform
+Info: mem_rst: Running transform generation_view_transform took 0.000s
+Info: spi_ad9361: Running transform generation_view_transform
+Info: spi_ad9361: Running transform generation_view_transform took 0.000s
+Info: sys_clk: Running transform generation_view_transform
+Info: sys_clk: Running transform generation_view_transform took 0.000s
+Info: sys_rst: Running transform generation_view_transform
+Info: sys_rst: Running transform generation_view_transform took 0.000s
+Info: util_ad9361_adc_cpack: Running transform generation_view_transform
+Info: util_ad9361_adc_cpack: Running transform generation_view_transform took 0.000s
+Info: util_ad9361_adc_fifo: Running transform generation_view_transform
+Info: util_ad9361_adc_fifo: Running transform generation_view_transform took 0.000s
+Info: util_ad9361_dac_upack: Running transform generation_view_transform
+Info: util_ad9361_dac_upack: Running transform generation_view_transform took 0.000s
 Info: clk_src: Running transform generation_view_transform
 Info: clk_src: Running transform generation_view_transform took 0.000s
 Info: clk_rst: Running transform generation_view_transform
@@ -225,53 +267,101 @@ Info: p2b_adapter: Running transform generation_view_transform
 Info: p2b_adapter: Running transform generation_view_transform took 0.000s
 Info: border: Running transform generation_view_transform
 Info: border: Running transform generation_view_transform took 0.000s
+Info: ad_serdes_clk_core: Running transform generation_view_transform
+Info: ad_serdes_clk_core: Running transform generation_view_transform took 0.000s
+Info: ad_serdes_in_core_a10: Running transform generation_view_transform
+Info: ad_serdes_in_core_a10: Running transform generation_view_transform took 0.000s
+Info: ad_serdes_out_core_a10: Running transform generation_view_transform
+Info: ad_serdes_out_core_a10: Running transform generation_view_transform took 0.000s
+Info: ad_cmos_out_core_a10: Running transform generation_view_transform
+Info: ad_cmos_out_core_a10: Running transform generation_view_transform took 0.000s
+Info: alt_serdes_pll: Running transform generation_view_transform
+Info: alt_serdes_pll: Running transform generation_view_transform took 0.000s
+Info: alt_serdes_in: Running transform generation_view_transform
+Info: alt_serdes_in: Running transform generation_view_transform took 0.000s
+Info: alt_serdes_out: Running transform generation_view_transform
+Info: alt_serdes_out: Running transform generation_view_transform took 0.000s
+Info: alt_serdes_out: Running transform generation_view_transform
+Info: alt_serdes_out: Running transform generation_view_transform took 0.000s
+Info: core: Running transform generation_view_transform
+Info: core: Running transform generation_view_transform took 0.000s
+Info: core: Running transform generation_view_transform
+Info: core: Running transform generation_view_transform took 0.000s
+Info: core: Running transform generation_view_transform
+Info: core: Running transform generation_view_transform took 0.000s
 Info: ghrd_10as066n2: Running transform merlin_avalon_transform
-Info: Interconnect is inserted between master arria10_hps_0.h2f_axi_master and slave onchip_memory2_0.s1 because the master is of type axi and the slave is of type avalon.
-Info: Interconnect is inserted between master hps_m.master and slave arria10_hps_0.f2h_axi_slave because the master is of type avalon and the slave is of type axi.
-Info: Interconnect is inserted between master f2sdram_m1.master and slave arria10_hps_0.f2sdram0_data because the master is of type avalon and the slave is of type axi.
-Info: Interconnect is inserted between master f2sdram_m.master and slave arria10_hps_0.f2sdram2_data because the master is of type avalon and the slave is of type axi.
-Warning: arria10_hps_0.f2h_irq0: Cannot connect clock for irq_mapper_001.sender
-Warning: arria10_hps_0.f2h_irq0: Cannot connect reset for irq_mapper_001.sender
-Warning: arria10_hps_0.f2h_irq1: Cannot connect clock for irq_mapper_002.sender
-Warning: arria10_hps_0.f2h_irq1: Cannot connect reset for irq_mapper_002.sender
-Info: ghrd_10as066n2: Running transform merlin_avalon_transform took 2.369s
-Info: arria10_hps_0: Running transform merlin_avalon_transform
-Info: arria10_hps_0: Running transform merlin_avalon_transform took 0.007s
-Info: emif_a10_hps_0: Running transform merlin_avalon_transform
-Info: emif_a10_hps_0: Running transform merlin_avalon_transform took 0.007s
-Info: f2sdram_m: Running transform merlin_avalon_transform
-Info: f2sdram_m: Running transform merlin_avalon_transform took 0.009s
-Info: f2sdram_m1: Running transform merlin_avalon_transform
-Info: f2sdram_m1: Running transform merlin_avalon_transform took 0.009s
+Info: Interconnect is inserted between master fmcomms2.axi_ad9361_adc_dma_m_dest_axi and slave sys_mem_interconnect_axi0.s0 because the master is of type axi4 and the slave is of type axi.
+Info: Interconnect is inserted between master fmcomms2.axi_ad9361_adc_dma_m_dest_axi and slave sys_mem_interconnect_axi0.s0 because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux_001.sink0
+Info: Interconnect is inserted between master fmcomms2.axi_ad9361_dac_dma_m_src_axi and slave sys_mem_interconnect_axi1.s0 because the master is of type axi4 and the slave is of type axi.
+Info: Interconnect is inserted between master fmcomms2.axi_ad9361_dac_dma_m_src_axi and slave sys_mem_interconnect_axi1.s0 because they have different clock source.
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux_001.sink0
+Info: Interconnect is inserted between master arria10_hps.h2f_axi_master and slave sys_inti_mem.s1 because the master is of type axi and the slave is of type avalon.
+Info: Interconnect is inserted between master sys_mem_interconnect_axi0.m0 and slave arria10_hps.f2sdram0_data because the master has wdata signal 64 bit wide, but the slave is 128 bit wide.
+Info: Interconnect is inserted between master sys_mem_interconnect_axi0.m0 and slave arria10_hps.f2sdram0_data because the master has wstrb signal 8 bit wide, but the slave is 16 bit wide.
+Info: Interconnect is inserted between master sys_mem_interconnect_axi0.m0 and slave arria10_hps.f2sdram0_data because the master has rdata signal 64 bit wide, but the slave is 128 bit wide.
+Info: Interconnect is inserted between master sys_mem_interconnect_axi1.m0 and slave arria10_hps.f2sdram2_data because the master has wdata signal 64 bit wide, but the slave is 128 bit wide.
+Info: Interconnect is inserted between master sys_mem_interconnect_axi1.m0 and slave arria10_hps.f2sdram2_data because the master has wstrb signal 8 bit wide, but the slave is 16 bit wide.
+Info: Interconnect is inserted between master sys_mem_interconnect_axi1.m0 and slave arria10_hps.f2sdram2_data because the master has rdata signal 64 bit wide, but the slave is 128 bit wide.
+Info: Interconnect is inserted between master hps_m.master and slave arria10_hps.f2h_axi_slave because the master is of type avalon and the slave is of type axi.
+Warning: arria10_hps.f2h_irq0: Cannot connect clock for irq_mapper_001.sender
+Warning: arria10_hps.f2h_irq0: Cannot connect reset for irq_mapper_001.sender
+Warning: arria10_hps.f2h_irq1: Cannot connect clock for irq_mapper_002.sender
+Warning: arria10_hps.f2h_irq1: Cannot connect reset for irq_mapper_002.sender
+Info: ghrd_10as066n2: Running transform merlin_avalon_transform took 3.534s
+Info: arria10_hps: Running transform merlin_avalon_transform
+Info: arria10_hps: Running transform merlin_avalon_transform took 0.007s
+Info: emif_a10_hps: Running transform merlin_avalon_transform
+Info: emif_a10_hps: Running transform merlin_avalon_transform took 0.007s
+Info: fmcomms2: Running transform merlin_avalon_transform
+Info: fmcomms2: Running transform merlin_avalon_transform took 0.010s
 Info: fpga_m: Running transform merlin_avalon_transform
-Info: fpga_m: Running transform merlin_avalon_transform took 0.009s
+Info: fpga_m: Running transform merlin_avalon_transform took 0.008s
 Info: hps_m: Running transform merlin_avalon_transform
-Info: hps_m: Running transform merlin_avalon_transform took 0.009s
+Info: hps_m: Running transform merlin_avalon_transform took 0.008s
 Info: mm_interconnect_0: Running transform merlin_avalon_transform
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_0: Running transform merlin_avalon_transform took 0.206s
+Info: mm_interconnect_0: Running transform merlin_avalon_transform took 0.076s
 Info: mm_interconnect_1: Running transform merlin_avalon_transform
-Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_1: Running transform merlin_avalon_transform took 0.247s
+Info: mm_interconnect_1: Running transform merlin_avalon_transform took 0.089s
 Info: mm_interconnect_2: Running transform merlin_avalon_transform
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_2: Running transform merlin_avalon_transform took 0.181s
+Info: mm_interconnect_3: Running transform merlin_avalon_transform
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_3: Running transform merlin_avalon_transform took 0.511s
+Info: mm_interconnect_4: Running transform merlin_avalon_transform
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
-Info: mm_interconnect_2: Running transform merlin_avalon_transform took 0.832s
-Info: mm_interconnect_3: Running transform merlin_avalon_transform
-Info: mm_interconnect_3: Running transform merlin_avalon_transform took 0.096s
-Info: mm_interconnect_4: Running transform merlin_avalon_transform
-Info: mm_interconnect_4: Running transform merlin_avalon_transform took 0.081s
+Info: mm_interconnect_4: Running transform merlin_avalon_transform took 0.783s
 Info: mm_interconnect_5: Running transform merlin_avalon_transform
-Info: mm_interconnect_5: Running transform merlin_avalon_transform took 0.086s
+Info: mm_interconnect_5: Running transform merlin_avalon_transform took 0.007s
+Info: mm_interconnect_6: Running transform merlin_avalon_transform
+Info: mm_interconnect_6: Running transform merlin_avalon_transform took 0.076s
+Info: mm_interconnect_7: Running transform merlin_avalon_transform
+Info: mm_interconnect_7: Running transform merlin_avalon_transform took 0.076s
+Info: mm_interconnect_8: Running transform merlin_avalon_transform
+Info: mm_interconnect_8: Running transform merlin_avalon_transform took 0.077s
 Info: hps_io: Running transform merlin_avalon_transform
-Info: hps_io: Running transform merlin_avalon_transform took 0.007s
+Info: hps_io: Running transform merlin_avalon_transform took 0.008s
 Info: avalon_st_adapter: Running transform merlin_avalon_transform
 Info: avalon_st_adapter: Running transform merlin_avalon_transform took 0.007s
 Info: avalon_st_adapter: Running transform merlin_avalon_transform
-Info: avalon_st_adapter: Running transform merlin_avalon_transform took 0.008s
+Info: avalon_st_adapter: Running transform merlin_avalon_transform took 0.007s
+Info: avalon_st_adapter_001: Running transform merlin_avalon_transform
+Info: avalon_st_adapter_001: Running transform merlin_avalon_transform took 0.007s
+Info: avalon_st_adapter_002: Running transform merlin_avalon_transform
+Info: avalon_st_adapter_002: Running transform merlin_avalon_transform took 0.007s
 Info: avalon_st_adapter: Running transform merlin_avalon_transform
 Info: avalon_st_adapter: Running transform merlin_avalon_transform took 0.007s
 Info: avalon_st_adapter_001: Running transform merlin_avalon_transform
@@ -282,45 +372,81 @@ Info: avalon_st_adapter_003: Running transform merlin_avalon_transform
 Info: avalon_st_adapter_003: Running transform merlin_avalon_transform took 0.007s
 Info: avalon_st_adapter_004: Running transform merlin_avalon_transform
 Info: avalon_st_adapter_004: Running transform merlin_avalon_transform took 0.007s
+Info: ad_serdes_clk_core: Running transform merlin_avalon_transform
+Info: ad_serdes_clk_core: Running transform merlin_avalon_transform took 0.007s
+Info: ad_serdes_in_core_a10: Running transform merlin_avalon_transform
+Info: ad_serdes_in_core_a10: Running transform merlin_avalon_transform took 0.007s
+Info: ad_serdes_out_core_a10: Running transform merlin_avalon_transform
+Info: ad_serdes_out_core_a10: Running transform merlin_avalon_transform took 0.007s
+Info: ad_cmos_out_core_a10: Running transform merlin_avalon_transform
+Info: ad_cmos_out_core_a10: Running transform merlin_avalon_transform took 0.008s
+Info: alt_serdes_in: Running transform merlin_avalon_transform
+Info: alt_serdes_in: Running transform merlin_avalon_transform took 0.007s
+Info: alt_serdes_out: Running transform merlin_avalon_transform
+Info: alt_serdes_out: Running transform merlin_avalon_transform took 0.007s
+Info: alt_serdes_out: Running transform merlin_avalon_transform
+Info: alt_serdes_out: Running transform merlin_avalon_transform took 0.007s
 Info: ghrd_10as066n2: "Naming system components in system: ghrd_10as066n2"
 Info: ghrd_10as066n2: "Processing generation queue"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2"
 Info: ghrd_10as066n2: "Generating: interrupt_latency_counter"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_hps_161_iv4svti"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_hps_161_kzeqlza"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_pio_161_imbvr3i"
 Info: button_pio: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_imbvr3i'
-Info: button_pio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_imbvr3i --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0002_button_pio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0002_button_pio_gen//ghrd_10as066n2_altera_avalon_pio_161_imbvr3i_component_configuration.pl  --do_build_sim=0  ]
+Info: button_pio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_imbvr3i --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0002_button_pio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0002_button_pio_gen//ghrd_10as066n2_altera_avalon_pio_161_imbvr3i_component_configuration.pl  --do_build_sim=0  ]
 Info: button_pio: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_imbvr3i'
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_pio_161_wd25eay"
 Info: dipsw_pio: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_wd25eay'
-Info: dipsw_pio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_wd25eay --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0003_dipsw_pio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0003_dipsw_pio_gen//ghrd_10as066n2_altera_avalon_pio_161_wd25eay_component_configuration.pl  --do_build_sim=0  ]
+Info: dipsw_pio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_wd25eay --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0003_dipsw_pio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0003_dipsw_pio_gen//ghrd_10as066n2_altera_avalon_pio_161_wd25eay_component_configuration.pl  --do_build_sim=0  ]
 Info: dipsw_pio: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_wd25eay'
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_emif_a10_hps_161_joeahua"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_emif_a10_hps_161_3riofoa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_fmcomms2_v161_10_ewycpga"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_jtag_avalon_master_161_7opu3yi"
 Info: ghrd_10as066n2: "Generating: altsource_probe_top"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_pio_161_p5oy5va"
 Info: led_pio: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_p5oy5va'
-Info: led_pio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_p5oy5va --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0005_led_pio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0005_led_pio_gen//ghrd_10as066n2_altera_avalon_pio_161_p5oy5va_component_configuration.pl  --do_build_sim=0  ]
+Info: led_pio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_p5oy5va --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0005_led_pio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0005_led_pio_gen//ghrd_10as066n2_altera_avalon_pio_161_p5oy5va_component_configuration.pl  --do_build_sim=0  ]
 Info: led_pio: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_p5oy5va'
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_onchip_memory2_161_lxrufkq"
-Info: onchip_memory2_0: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_onchip_memory2_161_lxrufkq'
-Info: onchip_memory2_0:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_onchip_memory2_161_lxrufkq --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0006_onchip_memory2_0_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1768755202528369288.dir/0006_onchip_memory2_0_gen//ghrd_10as066n2_altera_avalon_onchip_memory2_161_lxrufkq_component_configuration.pl  --do_build_sim=0  ]
-Info: onchip_memory2_0: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_onchip_memory2_161_lxrufkq'
 Info: ghrd_10as066n2: "Generating: altera_avalon_mm_bridge"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_sysid_qsys_161_hw2yfba"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_s5db5yi"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_jebzteq"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_ftjk6wa"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_btr2owi"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_7uk35qa"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_y6u2vty"
+Info: ghrd_10as066n2: "Generating: altera_axi_bridge"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_sysid_qsys_161_og3srga"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_onchip_memory2_161_ccgztyi"
+Info: sys_inti_mem: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_onchip_memory2_161_ccgztyi'
+Info: sys_inti_mem:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_onchip_memory2_161_ccgztyi --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0009_sys_inti_mem_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0009_sys_inti_mem_gen//ghrd_10as066n2_altera_avalon_onchip_memory2_161_ccgztyi_component_configuration.pl  --do_build_sim=0  ]
+Info: sys_inti_mem: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_onchip_memory2_161_ccgztyi'
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_o7da2nq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_js4gnpa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_5qx5nsi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_2t26f5q"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_b6wts4i"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_l2zw7hy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_3dkk5pi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_m7kouxi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_mm_interconnect_161_kbllf4q"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_irq_mapper_161_nvquryy"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_irq_mapper_161_43ijldi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_irq_mapper_161_hqwxraa"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_irq_mapper_161_kbptgda"
 Info: ghrd_10as066n2: "Generating: altera_reset_controller"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_interface_generator_140_h73okey"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_hps_io_161_5fadx5i"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_emif_arch_nf_161_k57spka"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_interface_generator_140_3zstnna"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_hps_io_161_5o74lpi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_emif_arch_nf_161_guvuorq"
+Info: ghrd_10as066n2: "Generating: axi_ad9361"
+Info: ad_serdes_clk_core: "Generating: ad_serdes_clk_core"
+Info: ad_serdes_in_core_a10: "Generating: ad_serdes_in_core_a10"
+Info: ad_serdes_out_core_a10: "Generating: ad_serdes_out_core_a10"
+Info: ad_cmos_out_core_a10: "Generating: ad_cmos_out_core_a10"
+Info: ghrd_10as066n2: "Generating: axi_dmac"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_pio_161_xquwv6i"
+Info: gpio: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_xquwv6i'
+Info: gpio:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_pio_161_xquwv6i --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0018_gpio_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0018_gpio_gen//ghrd_10as066n2_altera_avalon_pio_161_xquwv6i_component_configuration.pl  --do_build_sim=0  ]
+Info: gpio: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_pio_161_xquwv6i'
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_spi_161_mfkaska"
+Info: spi_ad9361: Starting RTL generation for module 'ghrd_10as066n2_altera_avalon_spi_161_mfkaska'
+Info: spi_ad9361:   Generation command is [exec F:/intelfpga/16.1/quartus/bin64/perl/bin/perl.exe -I F:/intelfpga/16.1/quartus/bin64/perl/lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin/europa -I F:/intelfpga/16.1/quartus/sopc_builder/bin/perl_lib -I F:/intelfpga/16.1/quartus/sopc_builder/bin -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/common -I F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi -- F:/intelfpga/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_spi/generate_rtl.pl --name=ghrd_10as066n2_altera_avalon_spi_161_mfkaska --dir=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0019_spi_ad9361_gen/ --quartus_dir=F:/intelfpga/16.1/quartus --verilog --config=C:/Users/dev/AppData/Local/Temp/alt7462_1989761026109546.dir/0019_spi_ad9361_gen//ghrd_10as066n2_altera_avalon_spi_161_mfkaska_component_configuration.pl  --do_build_sim=0  ]
+Info: spi_ad9361: Done RTL generation for module 'ghrd_10as066n2_altera_avalon_spi_161_mfkaska'
+Info: ghrd_10as066n2: "Generating: util_cpack"
+Info: ghrd_10as066n2: "Generating: util_wfifo"
+Info: ghrd_10as066n2: "Generating: util_upack"
 Info: ghrd_10as066n2: "Generating: altera_avalon_st_jtag_interface"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_timing_adapter_161_u532i6q"
 Info: ghrd_10as066n2: "Generating: altera_avalon_sc_fifo"
@@ -329,45 +455,95 @@ Info: ghrd_10as066n2: "Generating: altera_avalon_st_packets_to_bytes"
 Info: ghrd_10as066n2: "Generating: altera_avalon_packets_to_master"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_channel_adapter_161_fcviibi"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_channel_adapter_161_xd7xncy"
-Info: ghrd_10as066n2: "Generating: altera_merlin_slave_translator"
+Info: ghrd_10as066n2: "Generating: altera_merlin_axi_translator"
 Info: ghrd_10as066n2: "Generating: altera_merlin_axi_master_ni"
-Info: ghrd_10as066n2: "Generating: altera_merlin_slave_agent"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_j4d5mma"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_f2zvkiy"
+Info: ghrd_10as066n2: "Generating: altera_merlin_axi_slave_ni"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_y3bawqa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_f5u5xsy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_sf3gkfq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_yihgoia"
 Info: ghrd_10as066n2: "Generating: altera_merlin_burst_adapter"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_66iz2pa"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_yufdqsa"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_e3xg5ka"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_nv4cudq"
-Info: ghrd_10as066n2: "Generating: altera_merlin_width_adapter"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_upz5nya"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_6f2tghi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_vlpmgzq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_5ctisdy"
+Info: ghrd_10as066n2: "Generating: altera_avalon_dc_fifo"
 Info: ghrd_10as066n2: "Generating: altera_avalon_st_pipeline_stage"
+Info: ghrd_10as066n2: "Generating: altera_merlin_slave_translator"
+Info: ghrd_10as066n2: "Generating: altera_merlin_slave_agent"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_sptr6qy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_ukrlwxa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_ndeexqi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_tetq7vi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_afxevna"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_qcyoloy"
+Info: ghrd_10as066n2: "Generating: altera_merlin_width_adapter"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_st_adapter_161_4tryxxy"
 Info: ghrd_10as066n2: "Generating: altera_merlin_master_translator"
 Info: ghrd_10as066n2: "Generating: altera_merlin_master_agent"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_cwpupmi"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_54j6pka"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_ue62npa"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_to4nw7y"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_3cn2f3i"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_lepxjey"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_k5cyj4i"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_cmipw2q"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_mswkbei"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_b4dw4qi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_sgolcmq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_cwrrjzq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_4tad2hq"
+Info: ghrd_10as066n2: "Generating: altera_merlin_traffic_limiter"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_tkknnwy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_g6ro4ai"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_2eajr7q"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_xweuyaa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_yleiyny"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_tnqphuy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_xdfrsdq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_opr7r5q"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_tgym4hy"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_avalon_st_adapter_161_4hslsya"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_vr26f3y"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_pvtvnwi"
-Info: ghrd_10as066n2: "Generating: altera_merlin_traffic_limiter"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_zfzukmy"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_icmsfcq"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_bfk75pa"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_5ardxoi"
-Info: ghrd_10as066n2: "Generating: altera_merlin_axi_slave_ni"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_23evfkq"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_p6phnay"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_vlbffpa"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_rk5recq"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_j54ki5q"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_kblxcwy"
-Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_interface_generator_140_xnypezi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_7j7u7zi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_53v6b7a"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_dv3xayi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_ynxujwi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_75rarwy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_n45amya"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_hjzdcjq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_7qkhisy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_ujcnlfq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_zvbuxiy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_zd4cbxi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_ltyfvwa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_kezl4iy"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_4khdawa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_utjzd6y"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_v3i3spi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_router_161_mnvfeji"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_rr7j5xa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_zfaomvq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_demultiplexer_161_36ikc4a"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_merlin_multiplexer_161_esfhsha"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_arria10_interface_generator_140_xty2kgi"
+Info: ghrd_10as066n2: "Generating: ad_serdes_clk_core"
+Info: ghrd_10as066n2: "Generating: ad_serdes_in_core_a10"
+Info: ghrd_10as066n2: "Generating: ad_serdes_out_core_a10"
+Info: ghrd_10as066n2: "Generating: ad_cmos_out_core_a10"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_error_adapter_161_mg6siqa"
 Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_error_adapter_161_bzz5nli"
-Info: ghrd_10as066n2: Done "ghrd_10as066n2" with 72 modules, 177 files
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_alt_serdes_10_ruc4yeq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_alt_serdes_10_vaq6iza"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_alt_serdes_10_jgwqmpq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_alt_serdes_10_v6injpq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_iopll_161_sacslaa"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_lvds_161_l5lsykq"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_lvds_161_weuvy6y"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_gpio_161_ojngebi"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_lvds_core20_161_ugkw4ha"
+Info: ghrd_10as066n2: "Generating: ghrd_10as066n2_altera_lvds_core20_161_kxkdavi"
+Info: ghrd_10as066n2: "Generating: altera_gpio"
+Info: ghrd_10as066n2: Done "ghrd_10as066n2" with 134 modules, 347 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

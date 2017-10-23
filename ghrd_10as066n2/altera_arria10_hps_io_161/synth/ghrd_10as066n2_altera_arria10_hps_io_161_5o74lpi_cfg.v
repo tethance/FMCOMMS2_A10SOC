@@ -1,0 +1,5 @@
+config ghrd_10as066n2_altera_arria10_hps_io_161_5o74lpi_cfg;
+		design ghrd_10as066n2_altera_arria10_hps_io_161_5o74lpi;
+		instance ghrd_10as066n2_altera_arria10_hps_io_161_5o74lpi.border use ghrd_10as066n2_altera_arria10_interface_generator_140.ghrd_10as066n2_altera_arria10_interface_generator_140_xty2kgi;
+endconfig
+

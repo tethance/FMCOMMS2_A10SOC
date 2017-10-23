@@ -1,0 +1,5 @@
+config ghrd_10as066n2_alt_serdes_10_v6injpq_cfg;
+		design ghrd_10as066n2_alt_serdes_10_v6injpq;
+		instance ghrd_10as066n2_alt_serdes_10_v6injpq.alt_serdes_out use ghrd_10as066n2_altera_gpio_161.ghrd_10as066n2_altera_gpio_161_ojngebi;
+endconfig
+

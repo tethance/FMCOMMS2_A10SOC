@@ -1,14 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Oct 23 12:07:39 2017
+Analysis & Synthesis Status : Failed - Mon Oct 23 14:16:13 2017
 Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Standard Edition
 Revision Name : ghrd_10as066n2
 Top-level Entity Name : ghrd_a10_top
 Family : Arria 10
-Logic utilization (in ALMs) : N/A
-Total registers : 17537
-Total pins : 143
-Total virtual pins : 0
-Total block memory bits : 2,099,200
-Total DSP Blocks : 0
-Total HSSI RX channels : 0
-Total HSSI TX channels : 0
-Total PLLs : 1
+Logic utilization (in ALMs) : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

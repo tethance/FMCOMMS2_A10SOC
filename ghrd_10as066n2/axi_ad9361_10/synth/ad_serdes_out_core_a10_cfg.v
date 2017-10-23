@@ -1,0 +1,5 @@
+config ad_serdes_out_core_a10_cfg;
+		design ad_serdes_out_core_a10;
+		instance ad_serdes_out_core_a10.ad_serdes_out_core_a10 use ghrd_10as066n2_alt_serdes_10.ghrd_10as066n2_alt_serdes_10_jgwqmpq;
+endconfig
+

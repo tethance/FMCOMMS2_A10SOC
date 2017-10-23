@@ -1,0 +1,5 @@
+config ghrd_10as066n2_altera_gpio_161_ojngebi_cfg;
+		design ghrd_10as066n2_altera_gpio_161_ojngebi;
+		instance ghrd_10as066n2_altera_gpio_161_ojngebi.core use ghrd_10as066n2_altera_gpio_core20_161.altera_gpio;
+endconfig
+

@@ -1,0 +1,5 @@
+config ghrd_10as066n2_alt_serdes_10_jgwqmpq_cfg;
+		design ghrd_10as066n2_alt_serdes_10_jgwqmpq;
+		instance ghrd_10as066n2_alt_serdes_10_jgwqmpq.alt_serdes_out use ghrd_10as066n2_altera_lvds_161.ghrd_10as066n2_altera_lvds_161_weuvy6y;
+endconfig
+

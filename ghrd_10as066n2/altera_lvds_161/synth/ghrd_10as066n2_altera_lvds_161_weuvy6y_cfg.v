@@ -1,0 +1,5 @@
+config ghrd_10as066n2_altera_lvds_161_weuvy6y_cfg;
+		design ghrd_10as066n2_altera_lvds_161_weuvy6y;
+		instance ghrd_10as066n2_altera_lvds_161_weuvy6y.core use ghrd_10as066n2_altera_lvds_core20_161.ghrd_10as066n2_altera_lvds_core20_161_kxkdavi;
+endconfig
+
