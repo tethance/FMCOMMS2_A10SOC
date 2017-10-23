@@ -1,0 +1,2 @@
+<DTAppend name="altr,gmii-to-sgmii-converter" type="phandle" parentlabel="arria10_hps_0_i_emac_emac2" val="sgmii_2_gmii_to_sgmii_converter_0"/>
+<DTAppend name="altr,gmii-to-sgmii-converter" type="phandle" parentlabel="arria10_hps_0_i_emac_emac1" val="sgmii_1_gmii_to_sgmii_converter_0"/>

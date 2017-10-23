@@ -1,0 +1,5 @@
+config ghrd_10as066n2_altera_emif_a10_hps_161_joeahua_cfg;
+		design ghrd_10as066n2_altera_emif_a10_hps_161_joeahua;
+		instance ghrd_10as066n2_altera_emif_a10_hps_161_joeahua.arch use ghrd_10as066n2_altera_emif_arch_nf_161.ghrd_10as066n2_altera_emif_arch_nf_161_k57spka;
+endconfig
+
