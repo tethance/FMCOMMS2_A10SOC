@@ -1,0 +1,2 @@
+# FMCOMMS2_A10SOC
+Combine with FMCOOMMS2 and A10SOC
